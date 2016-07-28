@@ -19,7 +19,7 @@ RUN cd php-5.6.24 && ./configure --with-apxs2=/usr/sbin/apxs --disable-cgi --ena
 RUN yum install php-common php-mysql php-pecl-memcache php-ldap php-mbstring php-process -y
 
 # php.ini
-COPY php.ini /usr/local/etc/php/php.ini
+COPY php.ini /usr/local/lib/php.ini
 
 # httpd.conf to load the PHP module. The path on the right hand side of the LoadModule statement must point to the path of the PHP module on your system. The make install from above may have already added this for you, but be sure to check.
 # Verify path to module
